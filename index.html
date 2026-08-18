@@ -24,14 +24,18 @@
   h2 { font-size: 1.15rem; margin-top: 2em; }
   .updated { color: #5A6B7C; font-size: 0.9rem; margin-top: 0; }
   a { color: #1C6DD0; }
+  ul { padding-left: 1.2em; }
+  li { margin-bottom: .4em; }
 </style>
 </head>
 <body>
-<h1>Política de Privacidade — FlyDay</h1>
-<p class="updated">Última atualização: 13/07/2026</p>
+<!-- GERADO por tool/gen_privacy_html.dart a partir de docs/privacy-policy.md
+     no repo do app. NÃO edite à mão: rode o script de novo. -->
+<h1>Política de Privacidade — FlyDay</h1><p class="updated">Última atualização: 17/08/2026</p>
 
 <h2>Resumo</h2>
-<p>O FlyDay é um app <strong>local-first</strong>: seus equipamentos, baterias, voos, locais e preferências ficam armazenados <strong>somente no seu dispositivo</strong>. Não temos servidores, contas de usuário nem sincronização em nuvem. Nós não coletamos, vendemos nem compartilhamos seus dados.</p>
+<p>O FlyDay é um app <strong>local-first</strong>: seus equipamentos, baterias, voos, locais e preferências ficam armazenados <strong>somente no seu dispositivo</strong>. Não temos servidores, contas de usuário nem sincronização em nuvem. Não vendemos seus dados e não temos onde guardá-los.</p>
+<p>A única coisa que sai do aparelho, além das consultas de clima, são <strong>relatórios de falha e marcos de uso anônimos</strong> — sem nada do seu hobby junto. Está detalhado em "Diagnóstico e uso do app", mais abaixo.</p>
 
 <h2>Previsão do tempo</h2>
 <p>Para calcular o veredito de voo, o app consulta a API pública <strong>Open-Meteo</strong> (open-meteo.com), enviando apenas as coordenadas do local de voo que você cadastrou. Nenhum identificador pessoal acompanha essa requisição.</p>
@@ -43,10 +47,23 @@
 <p>Para explicar a direção do vento em termos de lugar real (ex.: "do lado de Sumaré"), o app consulta a API pública de geocodificação reversa do <strong>OpenStreetMap (Nominatim)</strong>, enviando apenas um ponto geográfico próximo ao seu local de voo. O resultado fica salvo no dispositivo e a consulta não se repete para o mesmo rumo. Dados © colaboradores do OpenStreetMap.</p>
 
 <h2>Anúncios (versão free)</h2>
-<p>A versão gratuita exibe anúncios do <strong>Google AdMob</strong> apenas em telas de consulta (previsão estendida e guia LiPo). O AdMob pode coletar o identificador de publicidade do aparelho para personalizar anúncios, conforme a <a href="https://policies.google.com/privacy">política do Google</a>. No iOS, o app pede a permissão de rastreamento (App Tracking Transparency) antes dessa coleta — recusar não remove nem limita nenhuma função do app, só faz os anúncios exibidos pararem de ser personalizados. O FlyDay Pro remove todos os anúncios.</p>
+<p>A versão gratuita exibe anúncios do <strong>Google AdMob</strong> apenas em telas de consulta (previsão estendida, guia LiPo e climatologia do local). O AdMob pode coletar o identificador de publicidade do aparelho para personalizar anúncios, conforme a <a href="https://policies.google.com/privacy">política do Google</a>. No iOS, o app pede a permissão de rastreamento (App Tracking Transparency) antes dessa coleta — recusar não remove nem limita nenhuma função do app, só faz os anúncios exibidos pararem de ser personalizados. O FlyDay Pro remove todos os anúncios.</p>
+
+<h2>Backup e compartilhamento de pista (você no controle)</h2>
+<p>O FlyDay Pro permite <strong>exportar seus dados</strong> para um arquivo e <strong>compartilhar os detalhes de um local de voo</strong> com outras pessoas. Nos dois casos, nada sai do aparelho automaticamente: o arquivo (ou o código da pista) só é gerado quando você toca no botão, e vai apenas para onde você escolher na tela de compartilhamento do sistema — WhatsApp, e-mail, Google Drive, armazenamento local etc. O FlyDay não recebe cópia, não intermedeia o envio e não tem servidor onde esse conteúdo pudesse ficar.</p>
+<p>O backup contém os dados do seu hobby (locais, equipamentos, baterias, ciclos, diário de voos, alertas e manutenção) e suas preferências do app; <strong>não</strong> contém a sua licença Pro (ela pertence à conta da loja) nem cache de previsão do tempo. O compartilhamento de pista contém <strong>apenas</strong> o local: nome, coordenadas e detalhes da pista — nenhum voo, equipamento ou bateria acompanha. A partir do momento em que você envia um arquivo a alguém, o conteúdo passa a estar sob controle de quem recebeu.</p>
 
 <h2>Compras</h2>
-<p>A compra do FlyDay Pro é processada inteiramente pela loja do seu aparelho — <strong>Google Play</strong> (Android) ou <strong>App Store</strong> (iOS). Não temos acesso aos seus dados de pagamento.</p>
+<p>A compra do FlyDay Pro é processada inteiramente pela loja do seu aparelho — <strong>Google Play</strong> (Android) ou <strong>App Store</strong> (iOS). Não temos acesso aos seus dados de pagamento. A licença fica vinculada à conta da loja usada na compra: ela é restaurável em outros aparelhos da <strong>mesma conta e da mesma loja</strong> ("Restaurar compra"), mas não é transferível entre contas nem entre Google Play e App Store, porque não existe conta de usuário do FlyDay que pudesse fazer essa ponte.</p>
+
+<h2>Diagnóstico e uso do app</h2>
+<p>Para saber quando o app quebra e como ele é usado, o FlyDay envia dois tipos de informação ao <strong>Firebase (Google)</strong>:</p>
+<ul>
+<li><strong>Relatórios de falha</strong> (Firebase Crashlytics): quando o app trava ou encontra um erro, é enviado o relatório técnico da falha — em que ponto do código aconteceu, versão do app, modelo do aparelho e versão do sistema. Não vai junto nada do seu hobby.</li>
+<li><strong>Eventos de uso</strong> (Firebase Analytics): um punhado de marcos anônimos, como "abriu a tela do FlyDay Pro", "registrou um voo" ou "atingiu um limite do plano free". São contagens agregadas, usadas para entender onde o app confunde ou trava.</li>
+</ul>
+<p>O que <strong>nunca</strong> é enviado: os seus locais de voo, coordenadas, equipamentos, baterias, voos, anotações ou qualquer texto que você digitou. Esses dados continuam somente no aparelho, como sempre.</p>
+<p>O Firebase gera um identificador aleatório de instalação para não contar a mesma pessoa duas vezes. Ele não está ligado ao seu nome, e-mail ou conta. O Analytics do FlyDay está configurado para <strong>não</strong> alimentar personalização de anúncios e para <strong>não</strong> coletar o identificador de publicidade do aparelho — diagnóstico e publicidade são coisas separadas aqui.</p>
 
 <h2>Notificações</h2>
 <p>Os alertas de janela de voo são calculados e agendados no próprio dispositivo, sem servidores.</p>
@@ -55,6 +72,6 @@
 <p>Como tudo é local, desinstalar o app (ou limpar os dados do app nas configurações do Android/iOS) remove permanentemente todas as informações.</p>
 
 <h2>Contato</h2>
-<p>Dúvidas sobre esta política: <a href="mailto:vmpires10@gmail.com">vmpires10@gmail.com</a>.</p>
+<p>Dúvidas sobre esta política: <strong>vmpires10@gmail.com</strong>.</p>
 </body>
 </html>
