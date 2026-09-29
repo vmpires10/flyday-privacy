@@ -31,14 +31,15 @@
 <body>
 <!-- GERADO por tool/gen_privacy_html.dart a partir de docs/privacy-policy.md
      no repo do app. NÃO edite à mão: rode o script de novo. -->
-<h1>Política de Privacidade — FlyDay</h1><p class="updated">Última atualização: 17/08/2026</p>
+<h1>Política de Privacidade — FlyDay</h1><p class="updated">Última atualização: 28/09/2026</p>
 
 <h2>Resumo</h2>
 <p>O FlyDay é um app <strong>local-first</strong>: seus equipamentos, baterias, voos, locais e preferências ficam armazenados <strong>somente no seu dispositivo</strong>. Não temos servidores, contas de usuário nem sincronização em nuvem. Não vendemos seus dados e não temos onde guardá-los.</p>
 <p>A única coisa que sai do aparelho, além das consultas de clima, são <strong>relatórios de falha e marcos de uso anônimos</strong> — sem nada do seu hobby junto. Está detalhado em "Diagnóstico e uso do app", mais abaixo.</p>
 
 <h2>Previsão do tempo</h2>
-<p>Para calcular o veredito de voo, o app consulta a API pública <strong>Open-Meteo</strong> (open-meteo.com), enviando apenas as coordenadas do local de voo que você cadastrou. Nenhum identificador pessoal acompanha essa requisição.</p>
+<p>Para calcular o veredito de voo, o app consulta a API <strong>Open-Meteo</strong> (open-meteo.com), enviando apenas as coordenadas do local de voo que você cadastrou. Nenhum identificador pessoal acompanha essa requisição.</p>
+<p><strong>Atualização automática:</strong> com ela ligada (padrão, desligável em Ajustes → Avisos e atualização), o app faz essa mesma consulta em segundo plano, a cada algumas horas, para manter alertas, horários vigiados, o resumo da véspera e o widget em dia sem você abrir o app. Vão as mesmas coordenadas dos locais que você cadastrou — <strong>nunca</strong> a posição do seu aparelho.</p>
 
 <h2>Localização</h2>
 <p>A permissão de localização é usada apenas, e opcionalmente, para preencher as coordenadas do seu local de voo no cadastro. Não é usada em segundo plano nem enviada a terceiros.</p>
@@ -51,7 +52,9 @@
 
 <h2>Backup e compartilhamento de pista (você no controle)</h2>
 <p>O FlyDay Pro permite <strong>exportar seus dados</strong> para um arquivo e <strong>compartilhar os detalhes de um local de voo</strong> com outras pessoas. Nos dois casos, nada sai do aparelho automaticamente: o arquivo (ou o código da pista) só é gerado quando você toca no botão, e vai apenas para onde você escolher na tela de compartilhamento do sistema — WhatsApp, e-mail, Google Drive, armazenamento local etc. O FlyDay não recebe cópia, não intermedeia o envio e não tem servidor onde esse conteúdo pudesse ficar.</p>
-<p>O backup contém os dados do seu hobby (locais, equipamentos, baterias, ciclos, diário de voos, alertas e manutenção) e suas preferências do app; <strong>não</strong> contém a sua licença Pro (ela pertence à conta da loja) nem cache de previsão do tempo. O compartilhamento de pista contém <strong>apenas</strong> o local: nome, coordenadas e detalhes da pista — nenhum voo, equipamento ou bateria acompanha. A partir do momento em que você envia um arquivo a alguém, o conteúdo passa a estar sob controle de quem recebeu.</p>
+<p>O backup contém os dados do seu hobby (locais, equipamentos, baterias, ciclos, diário de voos, alertas, horários vigiados, missões e manutenção) e suas preferências do app; <strong>não</strong> contém a sua licença Pro (ela pertence à conta da loja) nem cache de previsão do tempo. O compartilhamento de pista contém <strong>apenas</strong> o local: nome, coordenadas e detalhes da pista — nenhum voo, equipamento ou bateria acompanha. A partir do momento em que você envia um arquivo a alguém, o conteúdo passa a estar sob controle de quem recebeu.</p>
+<p>O mesmo vale para o <strong>boletim do campo</strong> e para o <strong>laudo de condições</strong> de uma missão: só são gerados quando você toca no botão e vão apenas para onde você escolher. O boletim (imagem da previsão para o grupo) leva só o nome do local, a classe do equipamento e a previsão — nada do seu equipamento, voos ou missões. O laudo (PDF, FlyDay Pro) leva o que você cadastrou na missão — título, cliente, local, horário e equipamento — e a previsão da janela; as coordenadas do local só entram se você ligar a opção. As anotações da missão nunca vão no laudo.</p>
+<p>O compartilhamento de pista também pode ser enviado como <strong>link</strong>. Nesse caso o conteúdo da pista viaja no <strong>fragmento</strong> do endereço (a parte depois do sinal #), que o navegador <strong>não</strong> envia ao servidor: a página que abre o convite é estática e lê o conteúdo no próprio aparelho de quem clicou. Ou seja, nem o FlyDay nem o serviço que hospeda a página recebem os dados da sua pista — o link continua sendo uma mensagem entre você e quem você escolheu.</p>
 
 <h2>Compras</h2>
 <p>A compra do FlyDay Pro é processada inteiramente pela loja do seu aparelho — <strong>Google Play</strong> (Android) ou <strong>App Store</strong> (iOS). Não temos acesso aos seus dados de pagamento. A licença fica vinculada à conta da loja usada na compra: ela é restaurável em outros aparelhos da <strong>mesma conta e da mesma loja</strong> ("Restaurar compra"), mas não é transferível entre contas nem entre Google Play e App Store, porque não existe conta de usuário do FlyDay que pudesse fazer essa ponte.</p>
@@ -66,7 +69,7 @@
 <p>O Firebase gera um identificador aleatório de instalação para não contar a mesma pessoa duas vezes. Ele não está ligado ao seu nome, e-mail ou conta. O Analytics do FlyDay está configurado para <strong>não</strong> alimentar personalização de anúncios e para <strong>não</strong> coletar o identificador de publicidade do aparelho — diagnóstico e publicidade são coisas separadas aqui.</p>
 
 <h2>Notificações</h2>
-<p>Os alertas de janela de voo são calculados e agendados no próprio dispositivo, sem servidores.</p>
+<p>Os alertas de janela de voo, o resumo da véspera e os avisos de horários vigiados são calculados e agendados no próprio dispositivo, sem servidores.</p>
 
 <h2>Exclusão de dados</h2>
 <p>Como tudo é local, desinstalar o app (ou limpar os dados do app nas configurações do Android/iOS) remove permanentemente todas as informações.</p>
